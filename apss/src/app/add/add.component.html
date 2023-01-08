@@ -1,0 +1,44 @@
+
+<form [formGroup]="uploadForm" (submit)="dataUpload()" class="mb-3">
+    <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" [ngClass]="{'is-invalid' : uploadForm.controls['name'].touched && uploadForm.controls['name'].invalid}" formControlName="name" class="form-control" placeholder="Enter your Name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Mobile Number</label>
+        <input type="number" [ngClass]="{'is-invalid' : uploadForm.controls['mobile'].touched && uploadForm.controls['mobile'].invalid}" formControlName="mobile" class="form-control" placeholder="Enter your mobile no">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" [ngClass]="{'is-invalid' : uploadForm.controls['mail'].touched && uploadForm.controls['mail'].invalid}" formControlName="mail" class="form-control" placeholder="Enter your email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">panCard No</label>
+        <input type="text" [ngClass]="{'is-invalid' : uploadForm.controls['panNo'].touched && uploadForm.controls['panNo'].invalid}" formControlName="panNo" class="form-control" placeholder="Enter your Name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Mother's Name</label>
+        <input type="text" [ngClass]="{'is-invalid' : uploadForm.controls['motherName'].touched && uploadForm.controls['motherName'].invalid}" formControlName="motherName" class="form-control" placeholder="Enter your mother's name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Father's Name</label>
+        <input type="text" [ngClass]="{'is-invalid' : uploadForm.controls['fatherName'].touched && uploadForm.controls['fatherName'].invalid}" formControlName="fatherName" class="form-control" placeholder="Enter your fahter's name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Upload photo</label>
+        <input type="file" (change)="onPhotoChanged($event)" class="form-control" placeholder="Upload your photo">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Upload your signarue image</label>
+        <input type="file" (change)="onSignChanged($event)" class="form-control" placeholder="upload signature">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Upload Adhar Card image</label>
+        <input type="file" (change)="onAdharChanged($event)" class="form-control" placeholder="upload adhar card pdf">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Upload 6 months bankStatement PDF</label>
+        <input type="file" (change)="onBankStatementChanged($event)" class="form-control" placeholder="upload bank statement">
+    </div>
+    <button class="btn-primary btn" type="submit">Submit</button>
+</form>

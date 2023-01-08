@@ -1,0 +1,23 @@
+
+  <div class="container mt-2">
+    <div class="cards-wrapper row">
+      <div class="card-holder mb-5 col-sm-12 col-xs-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center" *ngFor="let data of datas">
+        <div class="card" style="width: 18rem;">
+          <img src='{{"http://localhost:3000/"+ data.photo}}' class="card-img-top" alt="...">
+          <div class="card-body">
+            <img style="width: 100%; height: 100px;" class="mb-3" src='{{"http://localhost:3000/"+ data.signature}}' alt="">
+            <h5 class="card-title">Name : {{data.name}}</h5>
+            <p class="card-text">mobile No : {{data.mobile}}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Father's Name : {{data.fatherName}}</li>
+            <li class="list-group-item">Mother's Name : {{data.motherName}}</li>
+            <li class="list-group-item">PAN No : {{data.panNo}}</li>
+            <li class="list-group-item">Mail No : {{data.mail}}</li>
+            <li class="list-group-item"><a class="btn btn-sm btn-outline-success" href='{{"http://localhost:3000/" + data.adhar}}' style="width: 100%">View Adhar Card</a></li>
+            <li class="list-group-item"><a class="btn btn-sm btn-outline-info" href='{{"http://localhost:3000/" + data.bankstatement}}' style="width: 100%">View BankStatement</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
